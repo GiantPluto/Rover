@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+group = 'xyz.apollotv'
+archivesBaseName = 'rover'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+war {
+    baseName = archivesBaseName
+    version = version
+}
+
+logger.lifecycle "war.archivePath = $war.archivePath"
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1'
+    compile 'org.jsoup:jsoup:1.11.3'
+
+    compile 'javax.websocket:javax.websocket-api:1.1'
+}
+
+project.webAppDirName = 'WebContent'
