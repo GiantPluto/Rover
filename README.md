@@ -1,2 +1,2 @@
 # Rover
-The 2nd generation Apollo15 scraper server.
+An experimental Java-based Apollo15 scraper server.
