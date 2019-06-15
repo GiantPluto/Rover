@@ -20,7 +20,7 @@ public class SourceProviderFactory {
 
     private List<String> providers;
 
-    public SourceProviderFactory(){
+    private SourceProviderFactory(){
         providers = new ArrayList<>();
     }
 
